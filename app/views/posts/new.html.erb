@@ -1,0 +1,18 @@
+<h1>New Post</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @post do |f| %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control' %>
+
+      <%= f.label :body %>
+      <%-# link_to "(forgot password)", new_password_reset_path -%>
+      <%= f.text_area :body, class: 'form-control' %>
+
+      <%= f.submit "Create post", class: "btn btn-primary" %>
+    <% end %>
+
+  </div>
+</div>
