@@ -4,12 +4,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
+                        <br><br><br>
                         <h1 class="brand-heading">Members Only</h1>
-                        <p class="intro-text">A free, responsive, one page Bootstrap theme.
-                            <br>Created by Start Bootstrap.</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
+                        <p class="intro-text"> This is an exclusive clubhouse where members can write posts about non-members. 
+                        </p>
+                        <% if not signed_in? %>
+                            <a href=<%=signin_path %> class="btn btn-circle">
+                                <i class="fa fa-angle-double-down animated"></i>
+                            </a>
+                        <% end %>
+                        <br><br><br>
                     </div>
                 </div>
             </div>

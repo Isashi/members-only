@@ -1,12 +1,19 @@
 <h1>Members Only Posts</h1>
 
 <% @posts.each do |post| %>
-  <% if signed_in? %>
-    <p class="float-right">
-      Posted by:
-      <%= post.user.name %>
-    </p>
-  <% end %>
-  <h4 class="float-left"><%=post.title %></h4>  
-  <p class="clear"><%= post.body %></p>
+	<div class="row">
+		<div class="comment-box">
+	  	<% if signed_in? %>
+	    	<h4 class="autore">
+	      	Posted by:
+	      	<%= post.user.name %>
+	    	</h4>
+	    <% else %>
+	    	<h4 class="autore">
+	      	<li><%= link_to "Sign in to see the author", signin_path %></li>
+	    	</h4>
+	  	<% end %>
+	  	<span class="post-content"><%= post.body %></span>
+	  </div>
+	</div>
 <% end %>

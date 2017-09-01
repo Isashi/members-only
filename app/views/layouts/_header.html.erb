@@ -5,16 +5,18 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i> <span class="light">Members</span>Only
+                <a class="navbar-brand page-scroll" href="/">
+                    <i class="fa fa-play-circle"></i><span class="light">Members</span>Only
                 </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
+                        <li><%= link_to "posts", posts_path %></li>
+                        <li><span class="limitatore">|</span></li>
                     <% if signed_in? %>
-                        <li class="deepshd"><span>Welcome: <%= current_user.name.capitalize %></span></li>
+                        <li><span class="welcome">Welcome: <%= current_user.name.capitalize %></span></li>
                         <li><%= link_to "Log out", signout_path, method: :delete %></li>
                         <li><%= link_to "New Post", new_post_path %></li>
                    <% else %>

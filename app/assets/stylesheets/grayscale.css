@@ -162,7 +162,7 @@ a:focus {
   border-radius: 100% !important;
   font-size: 40px;
   color: white;
-  background: transparent;
+  background: url(assets/door.png);
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
@@ -179,6 +179,7 @@ a:focus {
   -moz-transition-property: -moz-transform;
   -moz-transition-duration: 1s;
 }
+
 .btn-circle:hover i.animated {
   -webkit-animation-name: pulse;
   -moz-animation-name: pulse;
